@@ -1,0 +1,22 @@
+body{
+    padding: 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: #003b6f;
+    color: #fff;
+}
+.options, .title, .output{
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.rock, .paper, .scissors{
+    padding: 5px;
+	margin:10px;
+    width: 100px;
+    border-radius: 10px;
+    background: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
