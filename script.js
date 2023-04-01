@@ -1,98 +1,41 @@
-var computerChoice = ["rock","paper","scissors"];
+//Create an application that asks a user to enter how many subjects they have. The application should then ask the user to enter the results for each subject. Store these results in an array and print them back to the user along with their overall average and grade for each module.
+let results=[];
+let average=0;
+let grades=[];
+let total=0;
 
-var result = document.getElementById("message");
-
-var movesLeft = 2;
-
-function playerRock(){
-	var randNum = Math.floor(Math.random()*3);
-	var computer = computerChoice[randNum];
-	if(movesLeft>0){
-		if(computer == "paper"){
-			result.textContent = "Computer Won";
-			movesLeft=movesLeft-1;
+function compute(){
+	subjects=parseInt(prompt("Please enter how many subjects you are inputting results for"));
+	for(var i=0;i<subjects;i++){
+		results[i]=parseInt(prompt("Please enter score for subject #"+(i+1)));
+	}
+	for(i=0;i<subjects;i++){
+		if((results[i]>=70) && (results[i]<=100)){
+			 grades[i]="1.1";
 		}
-		else if(computer == "scissors"){
-			result.textContent = "Player Won";
-			movesLeft=movesLeft-1;
-
+		else if((results[i]>=60) && (results[i]<70)){
+			 grades[i]="2.1";
 		}
-		else if(computer == "rock"){
-			result.textContent = "It's a TIE!";
-			movesLeft=movesLeft-1;
+		else if((results[i]>=50) && (results[i]<60)){
+			 grades[i]="2.2";
+		}
+		else if((results[i]>=40) && (results[i]<50)){
+			 grades[i]="Pass";
+		}
+		else if((results[i]>=0) && (results[i]<40)){
+			 grades[i]="Fail";
 		}
 		else{
-			result.textContent = "---ERROR---";
+			 grades[i]="Invalid result";
 		}
 	}
-	else{
-		document.getElementById("btn").style.visibility="hidden";
-		document.getElementById("refresh").style.display="visible";
-		document.getElementById("movesleft").innerHTML = "GAME OVER";
-		document.getElementById("refresh").innerHTML = "Please Refresh Page";
-	}
-}
-function playerPaper(){
-	var randNum = Math.floor(Math.random()*3);
-	var computer = computerChoice[randNum];
-	if(movesLeft>0){
-		if(computer == "scissors"){
-			result.textContent = "Computer Won";
-			movesLeft=movesLeft-1;
+	for(var i=0;i<subjects;i++){
+			total+=results[i];
 		}
-		else if(computer == "rock"){
-			result.textContent = "Player Won";
-			movesLeft=movesLeft-1;
-		}
-		else if(computer == "paper"){
-			result.textContent = "It's a TIE!";
-			movesLeft=movesLeft-1;
-		}
-		else{
-			result.textContent = "---ERROR---";
-		}
-	}
-	else{
-		document.getElementById("btn").style.visibility="hidden";
-		document.getElementById("refresh").style.display="visible";
-		document.getElementById("movesleft").innerHTML = "GAME OVER";
-		document.getElementById("refresh").innerHTML = "Please Refresh Page";
-	}
-}
-function playerScissors(){
-	var randNum = Math.floor(Math.random()*3);
-	var computer = computerChoice[randNum];
-	if(movesLeft>0){
-		if(computer == "rock"){
-			result.textContent = "Computer Won";
-			movesLeft=movesLeft-1;
-		}
-		else if(computer == "paper"){
-			result.textContent = "Player Won";
-			movesLeft=movesLeft-1;
-		}
-		else if(computer == "scissors"){
-			result.textContent = "It's a TIE!";
-			movesLeft=movesLeft-1;
-		}
-		else{
-			result.textContent = "---ERROR---";
-		}
-	}
-	else{
-		document.getElementById("btn").style.visibility="hidden";
-		document.getElementById("refresh").style.display="visible";
-		document.getElementById("movesleft").innerHTML = "GAME OVER";
-		document.getElementById("refresh").innerHTML = "Please Refresh Page";
-	}
-}
-function song(){
-	for(i=99;i>=0;i=i-1){
-		if(i>0){
-			document.getElementById("lyrics").innerHTML+="</br>"+i+" bottles of beer on the wall, "+i+" bottles of beer.</br>Take one down and pass it around, "+(i-1)+" bottles of beer on the wall</br></br>";
-		}
-		else{
-			document.getElementById("lyrics").innerHTML+="</br>"+i+" bottles of beer on the wall, "+i+" bottles of beer.</br>No more to take down, that's the end of the round, time to climb down off of the wall";
-		}
+	average=total/subjects;
+	
+	document.getElementById("avg").innerHTML="Your average is "+average;
+	for(i=0;i<subjects;i++){
+		document.getElementById("result-list").innerHTML+="Your result for module "+(i+1)+" was " +results[i]+". This means your grade was "+(grades[i])+"</br>";
 	}
 }
