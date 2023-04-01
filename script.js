@@ -34,7 +34,7 @@ function compute(){
 		}
 	average=total/subjects;
 	
-	document.getElementById("avg").innerHTML="Your average is "+average;
+	document.getElementById("avg").innerHTML="Your average is "+parseInt(average);
 	for(i=0;i<subjects;i++){
 		document.getElementById("result-list").innerHTML+="Your result for module "+(i+1)+" was " +results[i]+". This means your grade was "+(grades[i])+"</br>";
 	}
