@@ -1,8 +1,11 @@
 /*Background image*/
 body{
-	display:grid;
+	display:flex;
+	flex-direction:column;
 	background-image: url("img/Shoes.jpg");
 	background-size: cover;
+	height:100%;
+	min-height:100vh;
 }
 a:link{
 	color:#1154EF;
@@ -67,11 +70,11 @@ nav {
 	color: #1154EF;
 	font-weight: bold;
 }
-
+*/
 p {
 	color: white;
 }
-*/
+
 /*Buttons*/
 button {
   background-color: transparent;
