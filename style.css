@@ -4,7 +4,45 @@ body{
 	background-image: url("img/Shoes.jpg");
 	background-size: cover;
 }
-/*Nav Bar*/
+a:link{
+	color:#1154EF;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover{
+	color:white;
+	font-weight:bold;
+	text-decoration:none;
+}
+/*NAVBAR-BEGIN*/
+ .navbar-custom {
+	font-size: 16px;
+}
+.navbar-custom:hover{
+	background-color:black;
+}
+.navbar-custom .navbar-brand{
+	color:white;
+	font-weight:bold;
+}
+.navbar-custom .nav-item-active .nav-link{
+	color: #1154EF;
+	font-weight: bold;
+}
+.navbar-custom .nav-item .nav-link{
+	color: white;
+	font-weight:normal;
+}
+/*Next 2, customising the navbar toggle button that appears for smaller screens in responsive design so that it's not grey and can be see on our hover background*/
+.custom-toggler.navbar-toggler {
+	border-color: white;
+}
+.custom-toggler .navbar-toggler-icon {
+	background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+/*NAVBAR-END*/
+/*Nav Bar
 nav {
 	color: black;
 }
@@ -33,7 +71,7 @@ nav {
 p {
 	color: white;
 }
-
+*/
 /*Buttons*/
 button {
   background-color: transparent;
@@ -159,7 +197,48 @@ button:hover {
   margin-top: 10px;
 }
 
-/*footer*/
+/*FOOTER-BEGIN*/
+footer{
+	margin-top:auto;
+	color:white;
+	font-size:18px;
+	padding:25px;
+}
+footer:hover{
+	background:black;
+}
+.footer{
+	display:flex;
+	flex-direction:row;
+	align-items:stretch;
+}
+@media (max-width:1024px){
+	.footer{
+		display:flex;
+		flex-direction:column;
+		justify-content:space-around;
+	}
+}
+#left{
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-start;
+	align-items:center;
+}
+#center{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+}
+#right{
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	align-items:center;
+}
+/*FOOTER-END*/
+/*footer
 
 .footer {
   position: fixed;
@@ -180,3 +259,4 @@ ul {
 	color: white;
 	list-style: none;
 }
+*/
