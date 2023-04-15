@@ -80,7 +80,7 @@ input[type=submit]:hover {
 /*SETLIST-END*/
 /*FOOTER-BEGIN*/
 footer{
-	margin-top:20px;
+	margin-top:auto;
 	color:white;
 	font-size:18px;
 	padding:25px;
