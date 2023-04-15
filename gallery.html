@@ -7,28 +7,31 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<nav class="navbar sticky-top navbar-expand">
-		  <a class="navbar-brand" href="#">Beirt Eile</a>
-		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		  </button>
-		  <div class="collapse navbar-collapse" id="navbarNav">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="index.html">Home</a>
-				</li>
-				<li class="nav-item-active">
-					<a class="nav-link" href="gallery.html">Gallery</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="testimonials.html">Testimonials</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="contact.html">Contact Us</a>
-				</li>
-			</ul>
-		  </div>
-		</nav>
+		<main>
+			<nav class="navbar navbar-expand-lg navbar-custom">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#">Beirt Eile</a>
+					<button class="navbar-toggler ml-auto custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<li class="nav-item-active">
+								<a class="nav-link" href="gallery.html">Gallery</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="testimonials.html">Testimonials</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="contact.html">Contact Us</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
 			<!--Gallery images stored in a container. There's an opacity transform in the CSS for them, maybe a size transform too later once I can get the Javascript to not break-->
     <div class="button-container">
       <button onclick="toggleImages('images')">Images</button>
@@ -65,29 +68,22 @@
 			</div>
 		</div>
 		</div>
-		
+		</main>
 		<footer>
-			<div class="row">
-				<div class="col">	
-				<ul>
-					<li>51 N Great George's St, Rotunda,</li>
-					<li>Dublin 1, D01 WP78</li>
-				</ul>
+			<div class="row footer" id="footer">
+				<div class="col" id="left">	
+						<ul>51 N Great George's St, Rotunda,</ul>
+						<ul>Dublin 1, D01 WP78</ul>
 				</div>
-				<div class="col">
-				<ul>
-					<li> <a href="mailto:beirteiledublin@gmail.com">beirteiledublin@gmail.com</a></li>
-					<li>087 669 7420</li>
-				</ul>
+				<div class="col" id="center">
+						<ul> <a href="mailto:beirteiledublin@gmail.com">beirteiledublin@gmail.com</a></ul>
+						<ul>087 669 7420</ul>
 				</div>
-				<div class="col">
-					<ul class="social-media-links">
-					<li><a href="https://www.facebook.com/search/top?q=beirt%20eile" class="facebook">Facebook</a></li>
-					<li><a href="https://www.instagram.com/beirteile/" class="instagram">Instagram</a></li>
-					</ul>
+				<div class="col" id="right">
+					<ul><a href="https://www.facebook.com/search/top?q=beirt%20eile" class="facebook">Facebook</a></ul>
+					<ul><a href="https://www.instagram.com/beirteile/" class="instagram">Instagram</a></ul>
 				</div>
-			  </div>
-		</div>
+			</div>
 		</footer>
 		<script src="script.js"></script>
 	</body>
