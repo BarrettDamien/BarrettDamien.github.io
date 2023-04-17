@@ -11,6 +11,7 @@
 	</head>
 	<body>
 		<main>
+		<!--Navbar from Bootstrap-->
 			<nav class="navbar navbar-expand-lg sticky-top navbar-custom">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="index.html">Beirt Eile</a>
@@ -22,7 +23,7 @@
 							<li class="nav-item">
 								<a class="nav-link" href="index.html">Home</a>
 							</li>
-							<li class="nav-item-active">
+							<li class="nav-item-active"> <!--Blue to show that it's the current page-->
 								<a class="nav-link" href="gallery.html">Gallery</a>
 							</li>
 							<li class="nav-item">
@@ -35,11 +36,13 @@
 					</div>
 				</div>
 			</nav>
-			<!--Gallery images stored in a container. There's an opacity transform in the CSS for them, maybe a size transform too later once I can get the Javascript to not break-->
+			<!--Gallery images stored in a container. There's an opacity transform in the CSS for them on hover-->
 			<div class="button-container">
-				<button onclick="toggleImages('images')">Images</button>
+				<button onclick="toggleImages('images')">Images</button><!--Defaults to images showing so the footer stays down the bottom-->
 				<button onclick="toggleVideos('videos')">Videos</button>
 			</div>
+			
+			<!--Images-->
 			<div id="images">
 				<div class="gallery-container row">
 					<img height="200" width="200" class="gallery-item col-md-6 col-lg-3" src="img\Bodhran.jpg" alt="Declan playing the bodhran with Mairead Dancing"></img>
@@ -54,23 +57,27 @@
 					<img height="200" width="200" class="gallery-item col-md-6 col-lg-3" src="img\ONeills.jpg" alt="Four dancers pose in front of O'Neill's bar"></img>
 				</div>
 			</div>
+			
+			<!--Videos-->
 			<div id="videos" class="hidden">
 				<div class="gallery-video-container row">
 					<div class="video-item col-12 col-lg-6">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/p51ScVV7_5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					<p class="video-text">We were absolutely delighted to be asked to perform at the opening of Dropbox Dublin's new office! Having just opened their office in Park Place, Hatch Street, we helped them celebrate the occassion with some wonderful music and dancing. It might come as a surprising choice to have a group of Irish Dancers "welcome" in your beautiful new hardwood floors, but thankfully there was some building materials still on hand for us to batter!</p>
+						<p class="video-text">We were absolutely delighted to be asked to perform at the opening of Dropbox Dublin's new office! Having just opened their office in Park Place, Hatch Street, we helped them celebrate the occassion with some wonderful music and dancing. It might come as a surprising choice to have a group of Irish Dancers "welcome" in your beautiful new hardwood floors, but thankfully there was some building materials still on hand for us to batter!</p>
 					</div>
 					<div class="video-item col-12 col-lg-6">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/bo2ClP51wsw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					<p class="video-text">In 2017 we had the pleasure of performing with "Azeire" as part of the St. Patrick's day charity ball in Azerbaijan. Funds raised from the event go towards a local orphanage, which we visited and shared music and dance with the children they provide care for. This was a tremendous event with a good cause that we were honoured to have taken part in.</p>
+						<p class="video-text">In 2017 we had the pleasure of performing with "Azeire" as part of the St. Patrick's day charity ball in Azerbaijan. Funds raised from the event go towards a local orphanage, which we visited and shared music and dance with the children they provide care for. This was a tremendous event with a good cause that we were honoured to have taken part in.</p>
 					</div>
 					<div class="video-item col-12 col-lg-6">
 						<iframe width="560" height="315" src="https://www.youtube.com/embed/HmIHJ00u71w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-					<p class="video-text">In 2016, as part of the centenary celebrations, we performed in Liberty Hall. We were joined on the night by the Dublin Ukelele Orchestra and thoroughly enjoyed being part of the celebrations.</p>
+						<p class="video-text">In 2016, as part of the centenary celebrations, we performed in Liberty Hall. We were joined on the night by the Dublin Ukelele Orchestra and thoroughly enjoyed being part of the celebrations.</p>
 					</div>
 				</div>
 			</div>
 		</main>
+		
+		<!--Footer-->
 		<footer>
 			<div class="row footer" id="footer">
 				<div class="col" id="left">	
