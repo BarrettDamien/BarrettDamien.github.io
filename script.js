@@ -13,6 +13,3 @@ function toggleVideos() {
   videos.classList.remove('hidden');
   images.classList.add('hidden');
 }
-
-document.querySelector('.facebook').href = "https://www.facebook.com/search/top?q=beirt%20eile";
-document.querySelector('.instagram').href = "https://www.instagram.com/beirteile/";
