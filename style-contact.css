@@ -9,7 +9,7 @@ button {
 button:hover {
   background-color: rgba(17, 84, 239, 0.6);
 }
-
+/*formatting for the text boxes on the contact page to tailor the look yet keep it simple for users*/
 input[type=text], select, textarea {
 	width: 100%; /* Full width */
 	padding: 12px; 
@@ -22,17 +22,19 @@ input[type=text], select, textarea {
 	background-color:#e0dede;/*Slight off grey background for text fields*/
 	color:black;
 }
+/*This section is just the input buttonSimple formatting design for the button. Transparent background to match the rest of the website with our trademarked blue as a hover effect on the button*/
 input[type=submit] {
-	background-color: transparent;/*custom blue color HEX from dress in imagery*/
+	background-color: transparent;
 	color: white;
 	padding: 10px 20px;
 	border: 2px solid white;
 	cursor: pointer;
-	transition: background-color 0.5s ease;
+	transition: background-color 0.5s ease;/*Neat little fade effect for the blue background color of the button*/
 }
 input[type=submit]:hover {
 	background-color: rgba(17, 84, 239, 0.6);/*Highlight for showing button is ready to be clicked*/
 }
+/*Formatting for the background behind the form fields*/
 .container {
 	border-radius: 5px;
 	background-color: black;
@@ -42,6 +44,7 @@ input[type=submit]:hover {
 }
  /*FORM-END*/
 /*SETLIST-BEGIN*/
+/*Super simple formatting here just to be able to create a nested list under the header while also focusing more on h1-6 & p type formatting*/
 .setList{
 	margin:20px;
 	display:none;
